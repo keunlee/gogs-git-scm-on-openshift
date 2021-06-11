@@ -1,4 +1,4 @@
-# Gogs on Openshift
+# Gogs SCM Server on Openshift
 
 ## I. Create an Openshift Project
 
