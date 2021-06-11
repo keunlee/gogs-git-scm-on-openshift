@@ -41,3 +41,29 @@ exit
 # from the root of the source repository
 oc apply -k .
 ```
+
+# IV. Create a Uri Route
+
+```bash
+oc expose deployment/gogs
+oc expose svc/gogs
+gogs_uri=$(oc get routes gogs -o 'jsonpath={.spec.host}')
+
+# print the full uri and navigate to that in your browser
+# example: http://gogs-gogs-git-server.apps.okd.thekeunster.local
+echo http://$gogs_uri
+```
+
+# V. Setup
+
+There will be an initial setup screen. 
+- Select "MySql" as the database 
+- Adjust the database uri to: "mysql-gogs"
+- Adjust the database password to: "password"
+- Leave everything else as is, scroll to the bottom and continue
+
+You should end up at a page that looks like this:
+
+![Screenshot from 2021-06-11 01-10-18](https://user-images.githubusercontent.com/61749/121639258-e2bb0080-ca51-11eb-89e0-c5006745efc3.png)
+
+
