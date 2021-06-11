@@ -62,6 +62,8 @@ There will be an initial setup screen.
 - Adjust the database password to: "password"
 - Leave everything else as is, scroll to the bottom and continue
 
+FYI, you may end up at an unreachable address at http://localhost:3000, in which case, redirect yourself to the url as described in step IV.
+
 You should end up at a page that looks like this:
 
 ![Screenshot from 2021-06-11 01-10-18](https://user-images.githubusercontent.com/61749/121639258-e2bb0080-ca51-11eb-89e0-c5006745efc3.png)
