@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gogs
+spec:
+  selector:
+    matchLabels:
+      name: gogs
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: gogs
+    spec:
+      serviceAccountName: gogs-sa
+      containers:
+      - resources: {}
+        name: gogs
+        image: gogs/gogs:0.12
+        ports:
+        - name: gogs-port
+          containerPort: 3000
+        volumeMounts:
+        - mountPath: /data
+          name: data
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: gogs-storage
