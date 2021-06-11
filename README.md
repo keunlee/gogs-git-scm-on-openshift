@@ -35,14 +35,14 @@ mysql>exit;
 exit
 ```
 
-# III. Deploy Gogs
+## III. Deploy Gogs
 
 ```bash
 # from the root of the source repository
 oc apply -k .
 ```
 
-# IV. Create a Uri Route
+## IV. Create a Uri Route
 
 ```bash
 oc expose deployment/gogs
@@ -54,7 +54,7 @@ gogs_uri=$(oc get routes gogs -o 'jsonpath={.spec.host}')
 echo http://$gogs_uri
 ```
 
-# V. Setup
+## V. Setup
 
 There will be an initial setup screen. 
 - Select "MySql" as the database 
