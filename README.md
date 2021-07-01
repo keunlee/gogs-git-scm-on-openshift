@@ -3,7 +3,7 @@
 ## I. Create an Openshift Project
 
 ```bash
-oc create new-project gogs-scm-server
+oc new-project gogs-scm-server
 ```
 
 ## II. Create/Setup MySql Database Instance
