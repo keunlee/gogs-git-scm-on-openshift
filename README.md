@@ -58,9 +58,13 @@ echo http://$gogs_uri
 
 There will be an initial setup screen. 
 - Select "MySql" as the database 
-- Adjust the database uri to: "mysql-gogs"
+- Adjust the database uri/host to: "mysql-gogs"
 - Adjust the database password to: "password"
+- Adjust the application url to: the network route defined in the previous step, http://$gogs_uri
 - Leave everything else as is, scroll to the bottom and continue
+
+![Screenshot from 2021-07-01 10-01-51](https://user-images.githubusercontent.com/61749/124146545-7aa97a00-da53-11eb-861c-36102eb02a7c.png)
+
 
 FYI, you may end up at an unreachable address at http://localhost:3000, in which case, redirect yourself to the url as described in step IV.
 
